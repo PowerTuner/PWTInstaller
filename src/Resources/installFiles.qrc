@@ -1,0 +1,78 @@
+<!--
+  - This file is part of PWTInstaller.
+  - Copyright (C) 2025 kylon
+  -
+  - PWTInstaller is free software: you can redistribute it and/or modify
+  - it under the terms of the GNU General Public License as published by
+  - the Free Software Foundation, either version 3 of the License, or
+  - (at your option) any later version.
+  -
+  - PWTInstaller is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  - GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License
+  - along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<RCC>
+    <qresource prefix="/baseins">
+        <file>release/generic/qtuiotouchplugin.dll</file>
+        <file>release/iconengines/qsvgicon.dll</file>
+        <file>release/imageformats/qgif.dll</file>
+        <file>release/imageformats/qicns.dll</file>
+        <file>release/imageformats/qico.dll</file>
+        <file>release/imageformats/qjpeg.dll</file>
+        <file>release/imageformats/qsvg.dll</file>
+        <file>release/imageformats/qtga.dll</file>
+        <file>release/imageformats/qtiff.dll</file>
+        <file>release/imageformats/qwbmp.dll</file>
+        <file>release/imageformats/qwebp.dll</file>
+        <file>release/multimedia/ffmpegmediaplugin.dll</file>
+        <file>release/multimedia/windowsmediaplugin.dll</file>
+        <file>release/networkinformation/qnetworklistmanager.dll</file>
+        <file>release/platforms/qwindows.dll</file>
+        <file>release/styles/qmodernwindowsstyle.dll</file>
+        <file>release/tls/qcertonlybackend.dll</file>
+        <file>release/tls/qschannelbackend.dll</file>
+        <file>release/avcodec-61.dll</file>
+        <file>release/avformat-61.dll</file>
+        <file>release/avutil-59.dll</file>
+        <file>release/d3dcompiler_47.dll</file>
+        <file>release/dxcompiler.dll</file>
+        <file>release/dxil.dll</file>
+        <file>release/icuuc.dll</file>
+        <file>release/PWTShared.dll</file>
+        <file>release/Qt6Core.dll</file>
+        <file>release/Qt6Gui.dll</file>
+        <file>release/Qt6Multimedia.dll</file>
+        <file>release/Qt6Network.dll</file>
+        <file>release/Qt6Svg.dll</file>
+        <file>release/Qt6Widgets.dll</file>
+        <file>release/swresample-5.dll</file>
+        <file>release/swscale-8.dll</file>
+        <file>release/PWTUninstall.exe</file>
+        <file>release/PWTWin32.dll</file>
+    </qresource>
+    <qresource prefix="/baseclientins">
+        <file>release/PWTClientCommon.dll</file>
+        <file>release/PWTClientService.dll</file>
+    </qresource>
+    <qresource prefix="/servins">
+        <file>release/inpoutx64.dll</file>
+        <file>release/PowerTunerDaemon.exe</file>
+    </qresource>
+    <qresource prefix="/cliins">
+        <file>release/PowerTunerCLI.exe</file>
+    </qresource>
+    <qresource prefix="/clientins">
+        <file>release/PowerTunerClient.exe</file>
+    </qresource>
+    <qresource prefix="/consoleins">
+        <file>release/texttospeech/qtexttospeech_mock.dll</file>
+        <file>release/texttospeech/qtexttospeech_sapi.dll</file>
+        <file>release/texttospeech/qtexttospeech_winrt.dll</file>
+        <file>release/Qt6TextToSpeech.dll</file>
+        <file>release/PowerTunerConsole.exe</file>
+    </qresource>
+</RCC>
