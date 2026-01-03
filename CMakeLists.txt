@@ -67,6 +67,7 @@ if (has_ipo)
 	set_property(TARGET ${PROJECT_NAME} PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
 endif ()
 
+target_compile_options(${PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:/W3 /wo4061>)
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt::Core Qt::Widgets Qt::Network PWT::WIN32 Ktmw32)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
