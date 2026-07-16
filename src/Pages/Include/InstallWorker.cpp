@@ -97,7 +97,7 @@ namespace PWTI {
     quint64 InstallWorker::getEstimatedInstallSize() const {
         quint64 installSize = getInstallFilesTotalSize(":/baseins");
 
-        if (data->installDesktop || data->installCli || data->installConsole)
+        if (data->installDesktop || data->installConsole)
             installSize += getInstallFilesTotalSize(":/baseclientins");
 
         if (data->installDesktop)
@@ -105,9 +105,6 @@ namespace PWTI {
 
         if (data->installConsole)
             installSize += getInstallFilesTotalSize(":/consoleins");
-
-        if (data->installCli)
-            installSize += getInstallFilesTotalSize(":/cliins");
 
         if (data->installService)
             installSize += getInstallFilesTotalSize(":/servins");
@@ -180,7 +177,7 @@ namespace PWTI {
     }
 
     bool InstallWorker::installBaseClient() {
-        if (!data->installDesktop && !data->installConsole && !data->installCli)
+        if (!data->installDesktop && !data->installConsole)
             return true;
 
         return copyFiles(":/baseclientins", ":/baseclientins/release");
@@ -198,13 +195,6 @@ namespace PWTI {
             return true;
 
         return copyFiles(":/consoleins", ":/consoleins/release");
-    }
-
-    bool InstallWorker::installCli() {
-        if (!data->installCli)
-            return true;
-
-        return copyFiles(":/cliins", ":/cliins/release");
     }
 
     bool InstallWorker::installService() {
@@ -245,8 +235,6 @@ namespace PWTI {
             displayIcon = std::format(L"{}\\PowerTunerClient.exe", installLoc);
         else if (data->installConsole)
             displayIcon = std::format(L"{}\\PowerTunerConsole.exe", installLoc);
-        else if (data->installCli)
-            displayIcon = std::format(L"{}\\PowerTunerCLI.exe", installLoc);
         else
             displayIcon = std::format(L"{}\\PowerTunerDaemon.exe", installLoc);
 
@@ -473,7 +461,6 @@ namespace PWTI {
             installBaseClient() &&
             installDesktop() &&
             installConsole() &&
-            installCli() &&
             installService() &&
             createUninstall()))
         {

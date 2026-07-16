@@ -30,7 +30,6 @@ namespace PWTI {
         QLabel *instPath = nullptr;
         QLabel *instDesktop = nullptr;
         QLabel *instConsole = nullptr;
-        QLabel *instCli = nullptr;
         QLabel *instService = nullptr;
         QLabel *addStart = nullptr;
         QLabel *addEnv = nullptr;

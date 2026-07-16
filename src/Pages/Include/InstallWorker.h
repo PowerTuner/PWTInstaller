@@ -39,7 +39,6 @@ namespace PWTI {
         [[nodiscard]] bool installBaseClient();
         [[nodiscard]] bool installDesktop();
         [[nodiscard]] bool installConsole();
-        [[nodiscard]] bool installCli();
         [[nodiscard]] bool installService();
         [[nodiscard]] bool createUninstall();
         void downloadFile(const QString &url, const QString &outPath);

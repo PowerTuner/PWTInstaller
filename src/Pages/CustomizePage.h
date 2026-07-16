@@ -28,7 +28,6 @@ namespace PWTI {
     private:
         QCheckBox *clientChkb = nullptr;
         QCheckBox *consoleChkb = nullptr;
-        QCheckBox *cliChkb = nullptr;
         QCheckBox *serviceChkb = nullptr;
         QCheckBox *addToStartChkb = nullptr;
 
@@ -38,7 +37,6 @@ namespace PWTI {
     private slots:
         void onClientStateChanged(Qt::CheckState state) const;
         void onConsoleStateChanged(Qt::CheckState state) const;
-        void onCliStateChanged(Qt::CheckState state) const;
         void onServiceStateChanged(Qt::CheckState state) const;
         void onAddToStartStateChanged(Qt::CheckState state) const;
         void onEnvPathChanged(int idx) const;

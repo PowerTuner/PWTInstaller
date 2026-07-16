@@ -62,9 +62,6 @@
         <file>release/inpoutx64.dll</file>
         <file>release/PowerTunerDaemon.exe</file>
     </qresource>
-    <qresource prefix="/cliins">
-        <file>release/PowerTunerCLI.exe</file>
-    </qresource>
     <qresource prefix="/clientins">
         <file>release/PowerTunerClient.exe</file>
     </qresource>

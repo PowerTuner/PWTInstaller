@@ -24,7 +24,6 @@ namespace PWTI {
         bool licenseAccepted = false;
         bool installDesktop = true;
         bool installConsole = true;
-        bool installCli = true;
         bool installService = true;
         bool winringAccepted = false;
         QString path = "C:/Program Files/PowerTuner";

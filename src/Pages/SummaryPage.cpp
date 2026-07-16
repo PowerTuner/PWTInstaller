@@ -23,7 +23,6 @@ namespace PWTI {
         QHBoxLayout *instPathLyt = new QHBoxLayout();
         QHBoxLayout *instDeskLyt = new QHBoxLayout();
         QHBoxLayout *instConsoleLyt = new QHBoxLayout();
-        QHBoxLayout *instCliLyt = new QHBoxLayout();
         QHBoxLayout *instSvcLyt = new QHBoxLayout();
         QHBoxLayout *addStartLyt = new QHBoxLayout();
         QHBoxLayout *addEnvLyt = new QHBoxLayout();
@@ -33,7 +32,6 @@ namespace PWTI {
         instPath = new QLabel();
         instDesktop = new QLabel();
         instConsole = new QLabel();
-        instCli = new QLabel();
         instService = new QLabel();
         addStart = new QLabel();
         addEnv = new QLabel();
@@ -48,8 +46,6 @@ namespace PWTI {
         instDeskLyt->addWidget(instDesktop);
         instConsoleLyt->addWidget(new QLabel(QString("Install console client:")));
         instConsoleLyt->addWidget(instConsole);
-        instCliLyt->addWidget(new QLabel(QString("Install CLI client:")));
-        instCliLyt->addWidget(instCli);
         instSvcLyt->addWidget(new QLabel(QString("Install service:")));
         instSvcLyt->addWidget(instService);
         addStartLyt->addWidget(new QLabel(QString("Add PowerTuner to start menu:")));
@@ -63,8 +59,6 @@ namespace PWTI {
         lyt->addLayout(instDeskLyt);
         lyt->addSpacing(2);
         lyt->addLayout(instConsoleLyt);
-        lyt->addSpacing(2);
-        lyt->addLayout(instCliLyt);
         lyt->addSpacing(2);
         lyt->addLayout(instSvcLyt);
         lyt->addSpacing(2);
@@ -84,7 +78,6 @@ namespace PWTI {
         instPath->setText(data->path);
         instDesktop->setText(data->installDesktop ? "Yes":"No");
         instConsole->setText(data->installConsole ? "Yes":"No");
-        instCli->setText(data->installCli ? "Yes":"No");
         instService->setText(data->installService ? "Yes":"No");
         addStart->setText(data->addToStart ? "Yes":"No");
         addEnv->setText(data->addEnvPath == 0 ? "No" : (data->addEnvPath == 1 ? "My user":"All users"));

@@ -32,13 +32,11 @@ namespace PWTI {
 
         clientChkb = new QCheckBox("PowerTuner desktop client");
         consoleChkb = new QCheckBox("PowerTuner console client");
-        cliChkb = new QCheckBox("PowerTuner CLI client");
         serviceChkb = new QCheckBox("PowerTuner service");
         addToStartChkb = new QCheckBox("Add PowerTuner to Start menu");
 
         clientChkb->setChecked(installData->installDesktop);
         consoleChkb->setChecked(installData->installConsole);
-        cliChkb->setChecked(installData->installCli);
         serviceChkb->setChecked(installData->installService);
         addToStartChkb->setChecked(installData->addToStart);
         addEnvPathCombo->addItems({
@@ -58,7 +56,6 @@ namespace PWTI {
         lyt->addSpacing(6);
         lyt->addWidget(clientChkb);
         lyt->addWidget(consoleChkb);
-        lyt->addWidget(cliChkb);
         lyt->addWidget(serviceChkb);
         lyt->addSpacing(6);
         lyt->addWidget(optionsTitle);
@@ -73,7 +70,6 @@ namespace PWTI {
 
         QObject::connect(clientChkb, &QCheckBox::checkStateChanged, this, &CustomizePage::onClientStateChanged);
         QObject::connect(consoleChkb, &QCheckBox::checkStateChanged, this, &CustomizePage::onConsoleStateChanged);
-        QObject::connect(cliChkb, &QCheckBox::checkStateChanged, this, &CustomizePage::onCliStateChanged);
         QObject::connect(serviceChkb, &QCheckBox::checkStateChanged, this, &CustomizePage::onServiceStateChanged);
         QObject::connect(addToStartChkb, &QCheckBox::checkStateChanged, this, &CustomizePage::onAddToStartStateChanged);
         QObject::connect(addEnvPathCombo, &QComboBox::currentIndexChanged, this, &CustomizePage::onEnvPathChanged);
@@ -85,10 +81,6 @@ namespace PWTI {
 
     void CustomizePage::onConsoleStateChanged(const Qt::CheckState state) const {
         data->installConsole = state == Qt::Checked;
-    }
-
-    void CustomizePage::onCliStateChanged(const Qt::CheckState state) const {
-        data->installCli = state == Qt::Checked;
     }
 
     void CustomizePage::onServiceStateChanged(const Qt::CheckState state) const {
@@ -104,7 +96,7 @@ namespace PWTI {
     }
 
     void CustomizePage::onNextBtnClicked() {
-        if (!data->installDesktop && !data->installConsole && !data->installCli && !data->installService) {
+        if (!data->installDesktop && !data->installConsole && !data->installService) {
             QMessageBox::information(this, "Install", "At least one component must be selected");
             return;
         }
